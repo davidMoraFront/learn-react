@@ -21,32 +21,34 @@
 // container.appendChild(element);
 
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import Card from './components/Card';
 
-const user = {
-    firstName: 'David',
-    lastName: 'Mora',
-    avatar: 'https://images.emojiterra.com/google/android-10/128px/1f60e.png'
-}
+// const user = {
+//     firstName: 'David',
+//     lastName: 'Mora',
+//     avatar: 'https://images.emojiterra.com/google/android-10/128px/1f60e.png'
+// }
 
-function getName(user) {
-    return `${user.firstName} ${user.lastName}`
-}
+// function getName(user) {
+//     return `${user.firstName} ${user.lastName}`
+// }
 
-function getGreeting(user) {
-    if (user) {
-        return <h1>Hello {getName(user)}</h1>
-    }
-    return <h1>Hello Stranger</h1>
-}
+// function getGreeting(user) {
+//     if (user) {
+//         return <h1>Hello {getName(user)}</h1>
+//     }
+//     return <h1>Hello Stranger</h1>
+// }
 
-const element = (
-    <div>
-        {getGreeting(user)}
-        <img src={user.avatar}  alt="img"/>
-    </div>    
-)
+// const element = (
+//     <div>
+//         {getGreeting(user)}
+//         <img src={user.avatar}  alt="img"/>
+//     </div>    
+// )
 
 const container = document.getElementById('root');
 
-ReactDOM.render(element, container);
+ReactDOM.render(<Card />, container);
+

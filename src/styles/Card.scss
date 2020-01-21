@@ -1,0 +1,57 @@
+// falta terminarlo y subirlo
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+    .Fitness-Card {
+        border: none;
+        border-radius: 8px;
+        background: url('../images/circles.png') no-repeat, linear-gradient(to right, #A74CF2, #617BFB);
+        max-height: 140px;
+        max-width: 520px;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-end;
+        min-height: 140px;
+
+        >div {
+            display: flex;
+            flex-direction: row;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                flex: 2;
+
+                &.Fitness-Card-Image {
+                    justify-content: flex-end;
+                    flex: 1;
+
+                    img {
+                        margin-bottom: -4px;
+                    }
+                }
+            }
+    
+            .Fitness-Card-Info {
+                padding-left: 30px;
+                padding-right: 50px;
+    
+                h1{
+                    font-size: 23px;
+                    color: white;
+                    margin-bottom: 0;
+                }
+    
+                p{
+                    font-size: 11px;
+                    color: white;
+                }
+            }
+        }
+    }
+}
