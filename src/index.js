@@ -1,28 +1,7 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-
-
-// const element = document.createElement('h1');
-
-// element.innerText = 'Hola React';
-
-// const container = document.getElementById('root');
-
-// container.appendChild(element);
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Card from './components/Card';
+import React from "react";
+import ReactDOM from "react-dom";
+import Card from "./components/Card";
+import CirclesImg from "./images/circles.png";
 
 // const user = {
 //     firstName: 'David',
@@ -45,10 +24,18 @@ import Card from './components/Card';
 //     <div>
 //         {getGreeting(user)}
 //         <img src={user.avatar}  alt="img"/>
-//     </div>    
+//     </div>
 // )
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 
-ReactDOM.render(<Card />, container);
-
+ReactDOM.render(
+  <Card
+    title="Technique Guides"
+    description="Learn amazing street workout and calisthenics"
+    img={CirclesImg}
+    leftColor="#a74cf2"
+    rightColor="#617bfb"
+  />,
+  container
+);
