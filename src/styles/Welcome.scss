@@ -1,0 +1,14 @@
+.welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  div {
+    width: 685px;
+    margin-bottom: 35px;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Card from "./components/Card";
 import CirclesImg from "./images/circles.png";
+import Welcome from "./components/Welcome";
 
 // const user = {
 //     firstName: 'David',
@@ -30,12 +31,15 @@ import CirclesImg from "./images/circles.png";
 const container = document.getElementById("root");
 
 ReactDOM.render(
-  <Card
-    title="Technique Guides"
-    description="Learn amazing street workout and calisthenics"
-    img={CirclesImg}
-    leftColor="#a74cf2"
-    rightColor="#617bfb"
-  />,
+  <div>
+    <Welcome username="David" />
+    <Card
+      title="Technique Guides"
+      description="Learn amazing street workout and calisthenics"
+      img={CirclesImg}
+      leftColor="#a74cf2"
+      rightColor="#617bfb"
+    />
+  </div>,
   container
 );
