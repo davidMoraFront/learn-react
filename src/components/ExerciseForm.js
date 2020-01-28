@@ -2,16 +2,11 @@ import React from "react";
 import "../styles/ExerciseForm.scss";
 
 class ExerciseForm extends React.Component {
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state);
-  };
-
   render() {
-    const { onChange, form } = this.props;
+    const { onChange, onSubmit, form } = this.props;
     return (
       <div className="ExerciseForm-container">
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={onSubmit}>
           <div>
             <input
               type="text"
@@ -42,7 +37,7 @@ class ExerciseForm extends React.Component {
               value={form.img}
             />
           </div>
-          <div>
+          <div className="ExerciseForm-colors">
             <input
               type="text"
               className="form-control"
@@ -51,8 +46,6 @@ class ExerciseForm extends React.Component {
               onChange={onChange}
               value={form.leftColor}
             />
-          </div>
-          <div>
             <input
               type="text"
               className="form-control"
@@ -62,7 +55,9 @@ class ExerciseForm extends React.Component {
               value={form.rightColor}
             />
           </div>
-          <button type="submit">Submit</button>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     );
