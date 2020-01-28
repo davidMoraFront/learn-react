@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   margin-bottom: 20px;
+  flex: 1;
 
   .Fitness-Card {
     border: none;
@@ -12,7 +13,7 @@
     display: flex;
     flex: 1;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     min-height: 140px;
 
     > div {

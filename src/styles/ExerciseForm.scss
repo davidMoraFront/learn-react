@@ -1,0 +1,31 @@
+.ExerciseForm-container {
+  display: flex;
+  flex: 1;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      input {
+        border: 1px solid #d8d8d8;
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
+
+    button {
+      background-color: #337ab7;
+      border: 1px solid #d8d8d8;
+      border-radius: 5px;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

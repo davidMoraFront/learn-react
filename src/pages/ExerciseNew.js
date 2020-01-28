@@ -1,77 +1,33 @@
 import React from "react";
+import ExerciseForm from "../components/ExerciseForm";
+import Card from "../components/Card";
+import "../styles/ExerciseNew.scss";
 
 class ExerciseNew extends React.Component {
-  state = {};
-
-  handleSubmit = e => {
-    e.preventDefault();
-    console.log(this.state);
+  state = {
+    form: {
+      title: "",
+      description: "",
+      img: "",
+      leftColor: "",
+      rightColor: ""
+    }
   };
 
   handleChange = e => {
-    console.log(`${e.target.name}: ${e.target.value}`);
-
     this.setState({
-      [e.target.name]: e.target.value
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
     });
   };
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="title"
-              name="title"
-              onChange={this.handleChange}
-              value={this.state.title}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="description"
-              name="description"
-              onChange={this.handleChange}
-              value={this.state.description}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="img"
-              name="img"
-              onChange={this.handleChange}
-              value={this.state.img}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="leftColor"
-              name="leftColor"
-              onChange={this.handleChange}
-              value={this.state.leftColor}
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="rightColor"
-              name="rightColor"
-              onChange={this.handleChange}
-              value={this.state.rightColor}
-            />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <div className="ExerciseNew-container">
+        <Card {...this.state.form} />
+        <ExerciseForm onChange={this.handleChange} form={this.state.form} />
       </div>
     );
   }
