@@ -1,46 +1,42 @@
-.ExerciseForm-container {
+form {
   display: flex;
+  flex-direction: column;
   flex: 1;
+  margin-left: 20px;
 
-  form {
+  & > div {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    margin-bottom: 10px;
 
-    & > div {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-
-      input {
-        border: 1px solid #d8d8d8;
-        border-radius: 5px;
-        padding: 10px;
-      }
-
-      &.ExerciseForm-colors {
-        flex-direction: row;
-        justify-content: space-between;
-
-        input {
-          width: 45%;
-        }
-      }
-
-      &:last-child {
-        flex-direction: row;
-        justify-content: flex-end;
-      }
-    }
-
-    button {
-      background-color: #337ab7;
+    input {
       border: 1px solid #d8d8d8;
       border-radius: 5px;
       padding: 10px;
-      color: white;
-      cursor: pointer;
-      width: 100px;
     }
+
+    &.ExerciseForm-colors {
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        width: 45%;
+      }
+    }
+
+    &:last-child {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  button {
+    background-color: #337ab7;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    width: 100px;
   }
 }

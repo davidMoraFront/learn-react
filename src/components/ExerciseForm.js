@@ -5,7 +5,7 @@ class ExerciseForm extends React.Component {
   render() {
     const { onChange, onSubmit, form } = this.props;
     return (
-      <div className="ExerciseForm-container">
+      <React.Fragment>
         <form onSubmit={onSubmit}>
           <div>
             <input
@@ -59,7 +59,7 @@ class ExerciseForm extends React.Component {
             <button type="submit">Submit</button>
           </div>
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }

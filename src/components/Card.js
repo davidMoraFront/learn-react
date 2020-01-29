@@ -7,7 +7,7 @@ class Card extends React.Component {
   render() {
     const { title, description, img, leftColor, rightColor } = this.props;
     return (
-      <div className="card">
+      <React.Fragment>
         <div
           className="Fitness-Card"
           style={{
@@ -25,7 +25,7 @@ class Card extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

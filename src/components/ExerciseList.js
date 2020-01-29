@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import AddButton from "../components/AddButton";
 
 const ExerciseList = ({ exercises }) => (
-  <div>
+  <React.Fragment>
     {exercises.map(exercise => {
       return (
         <Card
@@ -17,7 +17,7 @@ const ExerciseList = ({ exercises }) => (
       );
     })}
     <AddButton />
-  </div>
+  </React.Fragment>
 );
 
 export default ExerciseList;
